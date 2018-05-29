@@ -20,12 +20,12 @@ public class DBManager {
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
 
-	private static final String URL = "jdbc:postgresql://localhost/usersDB?user=postgres&password=esu7163511";
+	private static final String URL = "jdbc:mysql://localhost/users?user=root&password=esu7163511&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
 	private static final String SQL_FIND_USER_BY_LOGIN = "SELECT * FROM users WHERE login=?";
 
 	private static final String SQL_CREATE_NEW_USER = 
-			"INSERT INTO public.users VALUES (DEFAULT, ?)";
+			"INSERT INTO users VALUES (DEFAULT, ?)";
 
 	private static final String SQL_FIND_ALL_USERS = "SELECT * FROM users";
 
@@ -134,7 +134,7 @@ public class DBManager {
 		User user = new User();
 		user.setId(rs.getInt("id"));
 		user.setLogin(rs.getString("login"));
-		user.setName(rs.getString("name"));
+	//	user.setName(rs.getString("name"));
 		return user;
 	}
 

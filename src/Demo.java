@@ -24,8 +24,8 @@ public class Demo {
 		printList(dbManager.findAllUsers());
 	
 
-	 // Part 2
-	/*	System.out.println("=======Part2========");
+/*  Part 2
+		System.out.println("=======Part2========");
 		dbManager.insertGroup(Group.createGroup("teamB"));
 		dbManager.insertGroup(Group.createGroup("teamC"));
 		printList(dbManager.findAllGroups());
